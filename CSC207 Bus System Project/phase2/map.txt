@@ -1,0 +1,29 @@
+Route: Subway, University
+Route: Subway, Bloor
+Route: Bus, College
+Route: Bus, Spadina
+Station: Subway, University, Queen's Park
+Station: Subway, University, Museum
+Station: Subway, University, St. George
+Station: Subway, University, Spadina
+Station: Subway, University, Dupont
+Station: Subway, University, St. Clair
+Station: Subway, University, Eglinton
+Station: Subway, Bloor, Bathurst
+Station: Subway, Bloor, Spadina
+Station: Subway, Bloor, St. George
+Station: Subway, Bloor, Bay
+Station: Subway, Bloor, Yonge
+Station: Bus, College, Bathurst
+Station: Bus, College, Spadina
+Station: Bus, College, St. George
+Station: Bus, College, University
+Station: Bus, College, Yonge
+Station: Bus, Spadina, Dundas
+Station: Bus, Spadina, College
+Station: Bus, Spadina, Harbord
+Station: Bus, Spadina, Bloor
+Station: Bus, Spadina, Dupont
+Hub: Subway, University, Queen's Park | Bus, College, University
+Hub: Subway, University, Spadina | Subway, Bloor, Spadina | Bus, Spadina, Bloor
+Hub: Bus, Spadina, College | Bus, College, Spadina

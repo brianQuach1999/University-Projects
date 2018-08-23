@@ -1,0 +1,39 @@
+Admin: Customers, Create, Danya Lette, danya.lette@mail.utoronto.ca
+Admin: Customers, Create, John Doe, email@mail.utoronto.ca
+Admin: Customers, Total
+Customer: 0: Update Name, Danya Canivet Lette
+Customer: 1: Update Name, Jane Smith
+Admin: Customers, Total
+Admin: Routes
+Customer: 0: Cards, New
+Customer: 0: Cards, View
+Customer: 1: Cards, New
+Customer: 1: Details
+Card: 0: Tap In, Subway, University, Museum, 8/07/2018 10:00
+Card: 0: Tap Out, Subway, University, Queen's Park, 8/07/2018 12:35
+Card: 0: Balance
+Customer: 0: Recent Trips
+Card: 1: Tap In, Subway, University, Museum, 10/07/2018 12:30
+Card: 1: Tap Out, Subway, University, Queen's Park, 10/07/2018 12:35
+Card: 1: Tap In, Bus, College, University, 10/07/2018 12:40
+Card: 1: Tap Out, Bus, College, Yonge, 10/07/2018 12:45
+Card 1: Balance
+Admin: Trips, Total
+Admin: Revenue, Total
+Admin: Revenue, 8/07/2018
+Admin: Revenue, 10/07/2018
+Card: 0: Trips
+Card: 1: Trips
+Customer: 0: Recent Trips
+Customer: 1: Recent Trips
+Card: 1: Balance
+Card: 1: Add Funds, 50
+Card: 1: Balance
+Customer: 0: Average Cost
+Customer: 1: Average Cost
+Card: 0: Balance
+Card: 0: Tap In, Subway, University, Queen's Park, 10/08/2018 12:35
+Card: 0: Tap Out, Subway, University, Eglinton, 10/08/2018 12:35
+Card: 0: Balance
+Customer: 0: Average Cost
+Customer: 0: Recent Trips

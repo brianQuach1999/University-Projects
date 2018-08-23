@@ -1,0 +1,7 @@
+Admin: Users, Create, Danya Lette, danya.lette@mail.utoronto.ca, admin
+Admin: Users, Create, Admina Userette, root, admin
+Admin: Users, Create, Brian Quach, brian.quach@mail.utoronto.ca, user
+Admin: Users, Create, Loic Nassif-Lachapelle, loic.nassif.lachapelle@mail.utoronto.ca, user
+Admin: Users, Create, Dhanraj Patel, dhanraj.patel@mail.utoronto.ca, user
+User: danya.lette@mail.utoronto.ca: Cards, New
+User: root: Cards, New

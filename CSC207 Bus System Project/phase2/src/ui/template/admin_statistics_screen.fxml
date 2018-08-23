@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.geometry.Insets?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="ui.AdminStatisticsController">
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+  </padding>
+  <fx:include
+    GridPane.columnSpan="4" GridPane.rowIndex="0"
+    fx:id="child" source="nav_bar.fxml"/>
+
+  <Label text="Statistics"
+    GridPane.columnIndex="0" GridPane.rowIndex="1"
+    GridPane.columnSpan="4">
+    <font>
+      <Font size="20"/>
+    </font>
+  </Label>
+
+    <Label  text="Date (DD/MM/YYYY): "
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"
+            GridPane.halignment="LEFT">
+      <font>
+        <Font size="15"/>
+      </font>
+    </Label>
+
+  <TextField fx:id="dateField" prefWidth="100"
+             text="06/08/2018"
+             GridPane.columnIndex="1" GridPane.rowIndex="2"
+             GridPane.columnSpan="1" GridPane.rowSpan="1"
+             GridPane.halignment="LEFT">
+  </TextField>
+
+  <Button fx:id="applyButton" text="Apply"
+    prefWidth="100" prefHeight="20"
+    GridPane.columnIndex="2" GridPane.rowIndex="2"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT"
+    onAction="#handleApplyButtonAction">
+  </Button>
+
+  <Button fx:id="clearButton" text="Clear"
+    prefWidth="100" prefHeight="20"
+    GridPane.columnIndex="3" GridPane.rowIndex="2"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT"
+    onAction="#handleClearButtonAction">
+  </Button>
+
+  <fx:include fx:id="statsTables" source="stats_tables_child_screen.fxml"
+  GridPane.columnSpan="4" GridPane.rowIndex="3"/>
+
+</GridPane>
+

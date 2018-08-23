@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- create card -->
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="ui.CreateCardScreenController"
+  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="15" vgap="15">
+  <padding>
+    <Insets top="10" right="10" bottom="10" left="10"/>
+  </padding>
+
+  <columnConstraints>
+    <ColumnConstraints maxWidth="Infinity"
+      halignment="CENTER" hgrow="ALWAYS">
+    </ColumnConstraints>
+  </columnConstraints>
+
+  <!-- Name of Card Label -->
+  <Label  text="Nickname: "
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="1" GridPane.rowSpan="1"
+          GridPane.halignment="LEFT">
+        <font>
+          <Font size="12"></Font>
+        </font>
+  </Label>
+
+  <!-- TextField for Card Name -->
+  <TextField  fx:id="nameField" prefWidth="100"
+              GridPane.columnIndex="1" GridPane.rowIndex="0"
+              GridPane.columnSpan="1" GridPane.rowSpan="1"
+              GridPane.halignment="CENTER">
+  </TextField>
+
+  <!-- 'Create' Button -->
+  <Button fx:id="createButton" text="Create Card"
+          prefWidth="100" prefHeight="20" defaultButton="false"
+          GridPane.columnIndex="0" GridPane.rowIndex="3"
+          GridPane.columnSpan="1" GridPane.rowSpan="1"
+          GridPane.halignment="RIGHT"
+          onAction="#handleCreateCardButton">
+  </Button>
+
+  <!-- Add Return Button -->
+  <Button fx:id="returnButton" text="Return"
+    prefWidth="100" prefHeight="20" defaultButton="false"
+    GridPane.columnIndex="1" GridPane.rowIndex="3"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT"
+    onAction="#handleReturnButtonAction">
+  </Button>
+
+</GridPane>

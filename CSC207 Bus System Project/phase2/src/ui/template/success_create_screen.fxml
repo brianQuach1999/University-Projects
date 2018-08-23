@@ -1,0 +1,42 @@
+<!-- swag -->
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+
+<GridPane fx:controller="ui.SuccessCreatedScreenController"
+  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="15" vgap="15">
+  <padding>
+    <Insets top="10" right="10" bottom="10" left="10"/>
+  </padding>
+
+  <columnConstraints>
+    <ColumnConstraints maxWidth="Infinity"
+      halignment="CENTER" hgrow="ALWAYS">
+    </ColumnConstraints>
+  </columnConstraints>
+
+  <!-- Add Msg label -->
+
+  <Label  fx:id="SuccessMsg" text="Success! You've Created a New Card!"
+          GridPane.columnIndex="0" GridPane.rowIndex="0"
+          GridPane.columnSpan="2" GridPane.rowSpan="1"
+          GridPane.halignment="CENTER">
+        <font>
+          <Font size="12"></Font>
+        </font>
+  </Label>
+
+  <!-- Add Return Button -->
+  <Button fx:id="returnMsgButton" text="Return"
+          prefWidth="100" prefHeight="20" defaultButton="false"
+          GridPane.columnIndex="0" GridPane.rowIndex="2"
+          GridPane.columnSpan="1" GridPane.rowSpan="1"
+          GridPane.halignment="CENTER"
+          onAction="#handleReturnMsgButtonAction">
+  </Button>
+
+</GridPane>

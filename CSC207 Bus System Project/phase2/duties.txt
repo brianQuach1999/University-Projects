@@ -1,0 +1,28 @@
+Project Contributions
+
+
+
+
+Loic
+- Large contribution to the UI. Created and worked on all .fxml files,
+  most of the controller files, as well as the overall design of the UI.
+- Some contribution to the API class.
+
+
+
+Brian
+- new functionality: Price modifiers
+- classes: Expirable, Price Modifiable, Price, All subclasses of price
+
+
+
+Dhanraj
+-mainly focused on the statistics part of the project.
+-made updates to accommodate new features in statistics
+-Worked on the gui admin portion of the project as well, mainly in the controller and fxml
+files of admin stats 
+- Some contribution to the API class.
+
+
+
+Danya

@@ -1,0 +1,86 @@
+<!-- User Login -->
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+
+<GridPane fx:controller="ui.UserLoginScreenController"
+    xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="15" vgap="15">
+    <padding>
+      <Insets top="10" right="100" bottom="10" left="100"/>
+    </padding>
+
+    <columnConstraints>
+      <ColumnConstraints maxWidth="Infinity"
+        halignment="CENTER" hgrow="ALWAYS">
+      </ColumnConstraints>
+    </columnConstraints>
+
+    <!-- Add Login Button -->
+    <Button fx:id="loginButton" text="Login"
+            prefWidth="200" prefHeight="30" defaultButton="false"
+            GridPane.columnIndex="0" GridPane.rowIndex="4"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"
+            GridPane.halignment="LEFT"
+            onAction="#handleLoginButtonAction">
+    </Button>
+
+    <!-- Add Return Button -->
+    <Button fx:id="returnButton" text="Return"
+            prefWidth="200" prefHeight="30" defaultButton="false"
+            GridPane.columnIndex="1" GridPane.rowIndex="4"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"
+            GridPane.halignment="RIGHT"
+            onAction="#handleReturnButtonAction">
+    </Button>
+
+    <!-- Add Username Label -->
+    <Label  text="Email"
+            GridPane.columnIndex="0" GridPane.rowIndex="1"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"
+            GridPane.halignment="LEFT">
+          <font>
+            <Font size="18"></Font>
+          </font>
+    </Label>
+
+    <!-- Add Username Field -->
+    <TextField  fx:id="userField" prefWidth="200"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"
+                GridPane.columnSpan="1" GridPane.rowSpan="1"
+                GridPane.halignment="RIGHT">
+    </TextField>
+
+    <!-- Add Password Label -->
+    <Label  text="Password"
+            GridPane.columnIndex="0" GridPane.rowIndex="2"
+            GridPane.columnSpan="1" GridPane.rowSpan="1"
+            GridPane.halignment="LEFT">
+          <font>
+            <Font size="18"></Font>
+          </font>
+    </Label>
+
+    <!-- Add Password Field -->
+    <PasswordField  fx:id="passField" prefWidth="200"
+                    GridPane.columnIndex="1" GridPane.rowIndex="2"
+                    GridPane.columnSpan="1" GridPane.rowSpan="1"
+                    GridPane.halignment="RIGHT">
+    </PasswordField>
+
+    <Label  fx:id="errorMessage"
+      GridPane.columnIndex="0" GridPane.rowIndex="3"
+      GridPane.columnSpan="1" GridPane.rowSpan="1"
+      GridPane.halignment="LEFT"
+      style="-fx-text-fill:red">
+      <font>
+        <Font size="12"></Font>
+      </font>
+    </Label>
+
+</GridPane>

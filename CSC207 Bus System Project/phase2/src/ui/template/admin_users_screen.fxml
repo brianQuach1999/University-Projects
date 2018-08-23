@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<GridPane alignment="CENTER" hgap="10.0" vgap="10.0"
+  xmlns:fx="http://javafx.com/fxml"
+  fx:controller="ui.AdminUsersController">
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+  </padding>
+  <fx:include fx:id="navigation" source="nav_bar.fxml"/>
+  <Label text="Users"
+    GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <font>
+      <Font size="20"/>
+    </font>
+  </Label>
+  <TableView fx:id="tableViewUsers" GridPane.columnIndex="0" GridPane.rowIndex="1">
+    <columns>
+      <TableColumn prefWidth="200.0" text="Name" fx:id="UserName">
+        <cellValueFactory><PropertyValueFactory property="name" />
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn prefWidth="250.0" text="Email" fx:id="UserEmail">
+        <cellValueFactory><PropertyValueFactory property="email" />
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn prefWidth="200.0" text="Password" fx:id="UserPassword">
+        <cellValueFactory><PropertyValueFactory property="password" />
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn prefWidth="75.0" text="Is Admin" fx:id="UserIsAdmin">
+        <cellValueFactory><PropertyValueFactory property="isAdmin" />
+        </cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+  <Label
+    GridPane.columnIndex="0" GridPane.rowIndex="3"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    text="Name"/>
+  <TextField fx:id="nameField" prefWidth="100"
+    text=""
+    GridPane.columnIndex="0" GridPane.rowIndex="4"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT">
+  </TextField>
+  <Label
+    GridPane.columnIndex="0" GridPane.rowIndex="5"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    text="Email"/>
+  <TextField fx:id="emailField" prefWidth="100"
+    text=""
+    GridPane.columnIndex="0" GridPane.rowIndex="6"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT">
+  </TextField>
+
+
+  <CheckBox text="Is Admin" fx:id="isAdminCheckBox"
+    GridPane.columnIndex="0" GridPane.rowIndex="7"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT"
+  />
+
+  <Label
+    GridPane.columnIndex="0" GridPane.rowIndex="8"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    text="Password"/>
+  <TextField fx:id="passwordField" prefWidth="100"
+    text=""
+    GridPane.columnIndex="0" GridPane.rowIndex="9"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT">
+  </TextField>
+
+  <Label fx:id="errorMessage"
+    style="-fx-text-fill: red"
+    GridPane.columnIndex="0" GridPane.rowIndex="10"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    text=""/>
+
+  <Button fx:id="deleteButton" text="Delete User"
+    prefWidth="175" prefHeight="75" defaultButton="false"
+    GridPane.columnIndex="0" GridPane.rowIndex="11"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="LEFT"
+    onAction="#handleDeleteButton">
+  </Button>
+
+  <Button fx:id="createButton" text="Create User"
+    prefWidth="175" prefHeight="75" defaultButton="false"
+    GridPane.columnIndex="0" GridPane.rowIndex="11"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="CENTER"
+    onAction="#handleCreateButton">
+  </Button>
+
+  <Button fx:id="saveButton" text="Save User"
+    prefWidth="175" prefHeight="75" defaultButton="false"
+    GridPane.columnIndex="0" GridPane.rowIndex="11"
+    GridPane.columnSpan="1" GridPane.rowSpan="1"
+    GridPane.halignment="RIGHT"
+    onAction="#handleSaveButton">
+  </Button>
+
+</GridPane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Label?>
+<GridPane fx:controller="ui.StatsTablesController"
+  xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="15" vgap="15">
+
+  <columnConstraints>
+    <ColumnConstraints maxWidth="Infinity"
+      halignment="CENTER" hgrow="ALWAYS">
+    </ColumnConstraints>
+  </columnConstraints>
+  <Label GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.columnIndex="0" text="Revenue: " />
+  <Label GridPane.halignment="LEFT" GridPane.rowIndex="0" GridPane.columnIndex="1" fx:id="revenueLabel" />
+  <TabPane GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2">
+    <tabs>
+      <Tab text="Stations">
+        <TableView fx:id="tableViewStations" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="100.0" text="Name" fx:id="StationName">
+              <cellValueFactory><PropertyValueFactory property="name" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="120.0" text="Type" fx:id="StationType">
+              <cellValueFactory><PropertyValueFactory property="type" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="100.0" text="Route" fx:id="StationRoute">
+              <cellValueFactory><PropertyValueFactory property="route" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="300.0" text="Adjacent To" fx:id="Adjacent" >
+              <cellValueFactory><PropertyValueFactory property="adjacent" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+      <Tab text="Routes">
+        <TableView fx:id="tableViewRoutes" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="100.0" text="Name" fx:id="RouteName">
+              <cellValueFactory><PropertyValueFactory property="name" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="120.0" text="Type" fx:id="RouteType">
+              <cellValueFactory><PropertyValueFactory property="type" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="500.0" text="Stations" fx:id="RouteStations">
+              <cellValueFactory><PropertyValueFactory property="stations" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+      <Tab text="Taps">
+        <TableView fx:id="tableViewTaps" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="120.0" text="Date" fx:id="TapDate">
+              <cellValueFactory><PropertyValueFactory property="date" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="200.0" text="Station" fx:id="TapStation">
+              <cellValueFactory><PropertyValueFactory property="station" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="120.0" text="Card" fx:id="TapCard">
+              <cellValueFactory><PropertyValueFactory property="card" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+      <Tab text="Transactions">
+        <TableView fx:id="tableViewTransactions" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="150.0" text="Time" fx:id="TransactionCard">
+              <cellValueFactory><PropertyValueFactory property="card" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="150.0" text="Price" fx:id="TransactionPrice">
+              <cellValueFactory><PropertyValueFactory property="price" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="150.0" text="Date" fx:id="TransactionDate">
+              <cellValueFactory><PropertyValueFactory property="date" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+      <Tab text="Trips">
+        <TableView fx:id="tableViewTrips" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="120.0" text="Start Time" fx:id="TripStartTime">
+              <cellValueFactory><PropertyValueFactory property="startDate" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="120.0" text="End Time" fx:id="TripEndTime">
+              <cellValueFactory><PropertyValueFactory property="endDate" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="100.0" text="Cost" fx:id="TripCost">
+              <cellValueFactory><PropertyValueFactory property="cost" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="500.0" text="Taps" fx:id="TripTaps">
+              <cellValueFactory><PropertyValueFactory property="taps" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+      <Tab text="Users">
+        <TableView fx:id="tableViewUsers" GridPane.columnIndex="0" GridPane.rowIndex="1">
+          <columns>
+            <TableColumn prefWidth="200.0" text="Name" fx:id="UserName">
+              <cellValueFactory><PropertyValueFactory property="name" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="250.0" text="Email" fx:id="UserEmail">
+              <cellValueFactory><PropertyValueFactory property="email" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="200.0" text="Password" fx:id="UserPassword">
+              <cellValueFactory><PropertyValueFactory property="password" />
+              </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="75.0" text="Is Admin" fx:id="UserIsAdmin">
+              <cellValueFactory><PropertyValueFactory property="isAdmin" />
+              </cellValueFactory>
+            </TableColumn>
+          </columns>
+        </TableView>
+      </Tab>
+    </tabs>
+  </TabPane>
+</GridPane>
